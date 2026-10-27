@@ -1,0 +1,9 @@
+h1 {text-align:center; color:#0000FF; font-family:Verdana; font-size:20pt}
+h2 {text-align:right; color:#800000; font-family:Verdana; font-size:16pt}
+h3 { font-size: 18pt; color: #f30000; font-family: Arial; }
+ol { list-style-type: upper-roman; color: #f30000}
+ul { list-style-image: url("kotedg1.jpg"); color: #f30000}
+body { background-image: url("fon9.jpg"); background-repeat: no-repeat; background-size: cover; }
+p { font-weight: bold; }
+p {text-align:justify; color:#191970; font-family:Arial; font-size:12pt}
+body {background-color:#99CCFF}
