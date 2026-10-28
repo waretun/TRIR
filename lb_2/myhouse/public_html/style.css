@@ -1,9 +1,87 @@
-h1 {text-align:center; color:#0000FF; font-family:Verdana; font-size:20pt}
-h2 {text-align:right; color:#800000; font-family:Verdana; font-size:16pt}
-h3 { font-size: 18pt; color: #f30000; font-family: Arial; }
-ol { list-style-type: upper-roman; color: #f30000}
-ul { list-style-image: url("kotedg1.jpg"); color: #f30000}
-body { background-image: url("fon9.jpg"); background-repeat: no-repeat; background-size: cover; }
-p { font-weight: bold; }
-p {text-align:justify; color:#191970; font-family:Arial; font-size:12pt}
-body {background-color:#99CCFF}
+/* === ВАШИ ПРОШЛЫЕ СТИЛИ (Задание 1 и Исследовательские задания) === */
+h1 {
+    text-align: center; 
+    color: #0000FF; 
+    font-family: Verdana; 
+    font-size: 20pt;
+}
+h2 {
+    text-align: right; 
+    color: #800000; 
+    font-family: Verdana; 
+    font-size: 16pt;
+}
+h3 {
+    font-size: 18pt; 
+    color: #f30000; 
+    font-family: Arial; 
+}
+ol {
+    list-style-type: upper-roman; 
+    color: #f30000;
+}
+ul {
+    list-style-image: url("sp.png"); 
+    color: #f30000;
+}
+body {
+    background-image: url("fon9.jpg"); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-color: #99CCFF; /* Объединил два ваших правила body в одно */
+}
+p {
+    text-align: justify; 
+    color: #191970; 
+    font-family: Arial; 
+    font-size: 12pt;
+    font-weight: bold; /* Жирный шрифт из вашего исследовательского задания */
+}
+
+/* === СТИЛИ ДЛЯ ЗАДАНИЙ 2 и 3 (Страница ploshady.html) === */
+/* 
+
+h1.main, h1.golub, h1.krasn, h1.zelen, h1.oranzhev {
+    font-family: Verdana;
+    text-align: left;
+    font-size: 14pt;
+}
+
+
+h1.main { color: navy; }
+h1.golub { color: blue; }
+h1.krasn { color: red; }
+h1.zelen { color: green; }
+h1.oranzhev { color: orange; } */
+
+/* Стили для абзацев с использованием разных классов (Задание 3) */
+p.abz1 {
+    color: #003366;
+    text-align: center;
+    font-family: Arial;
+    font-size: 12pt;
+}
+p.abz2 {
+    color: darkgreen;
+    text-align: justify;
+    font-family: Tahoma;
+    font-size: 11pt;
+}
+p.abz3 {
+    color: maroon;
+    text-align: right;
+    font-family: Times;
+    font-size: 13pt;
+}
+p.abz4 {
+    color: olive;
+    text-align: left;
+    font-family: Verdana;
+    font-size: 12pt;
+}
+p.abz5 {
+    color: purple;
+    text-align: justify;
+    font-family: Georgia;
+    font-size: 11pt;
+}

@@ -1,0 +1,26 @@
+/* Задаем фон для всей страницы меню */
+body {
+    background-color: #CCFFFF;
+}
+
+/* Стили для первой группы (синие оттенки, шрифт Tahoma) */
+#blue {
+    color: #0000CC;
+    font-family: Tahoma;
+}
+
+#blue_2 {
+    color: #3366FF;
+    font-family: Tahoma;
+}
+
+/* Стили для второй группы (коричневые оттенки, шрифт Times) */
+#brown {
+    color: #996633;
+    font-family: Times;
+}
+
+#brown_2 {
+    color: #CC6600;
+    font-family: Times;
+}
