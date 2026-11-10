@@ -1,0 +1,29 @@
+/* Общие стили */
+body { font-family: Arial, sans-serif; margin: 0; }
+
+/* Стили левого меню */
+.menu-body { background-color: #e0f7fa; padding: 10px; }
+.logo { text-align: center; border-bottom: 2px solid #006064; margin-bottom: 20px; }
+.logo h2 { margin: 5px 0; color: #006064; }
+.logo h2 span { color: #ff6f00; }
+.logo p { margin: 0; font-size: 11px; color: #00838f; letter-spacing: 1px; }
+.nav-list { list-style-type: none; padding: 0; }
+
+/* Стили контента */
+.content-body { padding: 20px; }
+.catalog-grid { display: flex; flex-wrap: wrap; gap: 20px; }
+
+/* Карточка дома */
+.project-card { border: 1px solid #ccc; padding: 15px; width: 250px; background: #f9f9f9; }
+.project-card img { width: 100%; height: 160px; object-fit: cover; border: 1px solid #ddd; }
+.project-card h3 { margin: 10px 0 5px 0; font-size: 16px; }
+.project-card .specs { background-color: #e0f7fa; padding: 5px; font-size: 12px; margin: 0; }
+
+/* Оглавление */
+.toc { background-color: #f1f1f1; padding: 10px; border-left: 4px solid #006064; margin-bottom: 20px; }
+
+/* --- СТИЛИ ССЫЛОК (ПЗ 7) --- */
+a { color: #006064; text-decoration: none; font-weight: bold; }
+a:visited { color: #9e9e9e; }
+a:hover { color: #b71c1c; text-decoration: underline; }
+a:active { color: #000; }
