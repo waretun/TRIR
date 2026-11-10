@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .calc-wrapper {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        h2 {
+            text-align: center;
+            font-family: "Times New Roman", serif;
+            margin-top: 0;
+        }
+        /* Внешняя таблица */
+        table.main-table {
+            border: 1px solid #999;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        .main-table td {
+            padding: 5px;
+        }
+        
+        /* Стили для ячеек с кнопками */
+        table.digits td, table.signs td {
+            background-color: #ccc;
+            text-align: center;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            cursor: pointer;
+            border: 1px solid #fff;
+            user-select: none; /* Чтобы текст не выделялся при клике */
+        }
+        
+        /* Стили для поля результата */
+        #result {
+            background-color: yellow;
+            height: 50px;
+            font-size: 28px;
+            text-align: right;
+            padding-right: 10px;
+            border: 1px solid #999;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        
+        table.digits { border-collapse: collapse; }
+        table.signs { border-collapse: collapse; }
+    </style>
+</head>
+<body>
+
+    <div class="calc-wrapper">
+        <h2>Калькулятор</h2>
+
+        <table class="main-table">
+            <tr>
+                <td colspan="2">
+                    <!-- Ячейка результата -->
+                    <div id="result"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- Таблица цифр -->
+                    <table class="digits" id="digits">
+                        <tr><td>7</td><td>8</td><td>9</td></tr>
+                        <tr><td>4</td><td>5</td><td>6</td></tr>
+                        <tr><td>1</td><td>2</td><td>3</td></tr>
+                        <tr><td colspan="2">0</td><td>.</td></tr>
+                    </table>
+                </td>
+                <td>
+                    <!-- Таблица знаков -->
+                    <table class="signs" id="signs">
+                        <tr><td>/</td><td>*</td></tr>
+                        <tr><td>-</td><td>+</td></tr>
+                        <tr><td>(</td><td>)</td></tr>
+                        <tr><td id="clear">C</td><td id="calculate">=</td></tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        // Функция, выполняемая по окончании загрузки страницы
+        window.onload = function() {
+            var oDigits = document.getElementById('digits');
+            var oSigns = document.getElementById('signs');
+            var oResult = document.getElementById('result');
+            var oClear = document.getElementById('clear');
+            var oCalc = document.getElementById('calculate');
+
+            // Обработчик клика по цифрам и знакам
+            oDigits.onclick = oSigns.onclick = function(e) {
+                var elem = null;
+                
+                // Кросс-браузерное получение элемента
+                if (e) elem = e.target;
+                else elem = window.event.srcElement;
+
+                if (elem && elem.tagName.toLowerCase() == 'td') {
+                    // Проверяем, не является ли эта ячейка кнопкой "C" или "="
+                    if (elem.id !== 'clear' && elem.id !== 'calculate') {
+                        oResult.innerHTML += elem.innerHTML;
+                    }
+                }
+            };
+
+            // Обработка кнопки "="
+            oCalc.onclick = function(e) {
+                if (!e) e = window.event;
+                e.cancelBubble = true; // Запрещаем передачу события родителю
+                try {
+                    oResult.innerHTML = eval(oResult.innerHTML);
+                } catch (ex) {
+                    // Если ошибка (например, неверные скобки), ничего не делаем
+                }
+            };
+
+            // Обработка кнопки "C" (Очистить)
+            oClear.onclick = function(e) {
+                if (!e) e = window.event;
+                e.cancelBubble = true; 
+                oResult.innerHTML = ""; 
+            };
+
+            // Самостоятельное задание: Изменение цвета при нажатии
+            var cells = document.querySelectorAll('.digits td, .signs td');
+            cells.forEach(function(cell) {
+                if (cell.id !== 'clear' && cell.id !== 'calculate') {
+                    cell.onmousedown = function() {
+                        this.style.color = 'red';
+                    };
+                    cell.onmouseup = function() {
+                        this.style.color = '';
+                    };
+                    cell.onmouseout = function() {
+                        this.style.color = ''; // Если мышку увели, возвращаем цвет
+                    };
+                }
+            });
+        };
+    </script>
+</body>
+</html>
