@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Страница 2</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+    </style>
+</head>
+<body>
+    <table width="100%" border="1" cellspacing="0" cellpadding="10">
+        <!-- Бегущая строка в шапке -->
+        <tr>
+            <td colspan="2" bgcolor="#E6E6FA">
+                <marquee behavior="scroll" direction="left" scrollamount="5">Добро пожаловать на сайт MyHouse.ru</marquee>
+            </td>
+        </tr>
+        
+        <!-- Меню и контент -->
+        <tr>
+            <!-- Меню слева (фиксированная ширина 200px) -->
+            <td width="200" valign="top" bgcolor="#f0f0f0">
+                <h3>Меню</h3>
+                <ul>
+                    <li><a href="page1.html">Главная (Страница 1)</a></li>
+                    <li><a href="page2.html">О компании (Страница 2)</a></li>
+                </ul>
+            </td>
+            
+            <!-- Контент справа (резиновый) -->
+            <td valign="top">
+                <h2>О компании</h2>
+                <p>Это контент второй страницы. Здесь могла бы быть информация о вашей компании, история ее создания или контактные данные.</p>
+                <p>Вернитесь на <a href="page1.html">первую страницу</a>.</p>
+            </td>
+        </tr>
+        
+        <!-- Подвал -->
+        <tr>
+            <td colspan="2" bgcolor="#E6E6FA" align="center">Подвал сайта</td>
+        </tr>
+    </table>
+</body>
+</html>
