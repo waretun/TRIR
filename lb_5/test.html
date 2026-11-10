@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Тест</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Опрос</h1>
+
+        <div class="menu">
+            <a href="main.html" class="btn">Главная</a>
+            <a href="test.html" class="btn">Пройти тест</a>
+            <a href="zakaz.html" class="btn">Заказать</a>
+            <a href="contact.html" class="btn">Контакты</a>
+        </div>
+
+        <form class="test-form" action="results.html" method="get">
+            <div class="question">
+                <h3>1. Что вы обычно делаете утром?</h3>
+                <label><input type="radio" name="q1" value="sleep" required> Сплю до обеда</label><br>
+                <label><input type="radio" name="q1" value="eat"> Завтракаю</label><br>
+                <label><input type="radio" name="q1" value="play"> Делаю зарядку</label>
+            </div>
+
+            <div class="question">
+                <h3>2. Какая ваша любимая еда?</h3>
+                <label><input type="radio" name="q2" value="meat" required> Мясо</label><br>
+                <label><input type="radio" name="q2" value="bones"> Кости</label><br>
+                <label><input type="radio" name="q2" value="all"> Всё подряд</label>
+            </div>
+
+            <div class="question">
+                <h3>3. Как вы предпочитаете отдыхать?</h3>
+                <label><input type="radio" name="q3" value="lazy" required> Лежу на диване</label><br>
+                <label><input type="radio" name="q3" value="active"> Бегаю и прыгаю</label><br>
+                <label><input type="radio" name="q3" value="social"> В компании друзей</label>
+            </div>
+
+            <div class="question">
+                <h3>4. Что вам нравится? (можно выбрать несколько)</h3>
+                <label><input type="checkbox" name="q4" value="sleep"> Спать</label><br>
+                <label><input type="checkbox" name="q4" value="eat"> Есть</label><br>
+                <label><input type="checkbox" name="q4" value="play"> Играть</label><br>
+                <label><input type="checkbox" name="q4" value="hunt"> Охранять</label>
+            </div>
+
+            <div class="question">
+                <h3>5. Расскажите о себе:</h3>
+                <textarea name="about" rows="4" placeholder="Напишите пару слов..."></textarea>
+            </div>
+
+            <div class="form-buttons">
+                <button type="submit" class="btn">Отправить ответы</button>
+                <button type="reset" class="btn btn-clear">Очистить</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

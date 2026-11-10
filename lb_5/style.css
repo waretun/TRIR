@@ -1,0 +1,92 @@
+body {
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+}
+
+h1 { color: #333; margin-bottom: 20px; }
+
+.menu { margin: 20px 0; }
+
+.btn {
+    background-color: #4a4a4a;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+    display: inline-block;
+    font-size: 16px;
+}
+.btn:hover { background-color: #333; }
+.btn-clear { background-color: #888; }
+.btn-clear:hover { background-color: #666; }
+
+.big-btn { padding: 15px 30px; font-size: 18px; margin-top: 20px; }
+
+/* Формы */
+.test-form, .order-form, .contact-form { text-align: left; margin: 20px 0; }
+
+.question, .contact-info, .result-info {
+    background: #f9f9f9;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+label { display: block; margin: 10px 0; cursor: pointer; }
+
+input[type="text"], input[type="email"], input[type="tel"], 
+input[type="number"], input[type="password"], select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input[type="radio"], input[type="checkbox"] { margin-right: 10px; }
+
+.form-buttons { text-align: center; margin-top: 30px; }
+
+/* Таблица для формы заказа (Рис. 10) */
+.order-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+.order-table td { padding: 8px; border: 1px solid #ccc; vertical-align: top; }
+.order-table td:first-child { width: 40%; font-weight: bold; text-align: right; }
+.order-table input[type="text"], .order-table input[type="tel"], 
+.order-table input[type="email"], .order-table select, .order-table textarea {
+    width: 95%; margin: 0;
+}
+
+/* Fieldset (Рис. 12) */
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+legend { font-weight: bold; color: #333; padding: 0 5px; }
+fieldset button {
+    background: #4a4a4a; color: #fff; font-size: 14px;
+    border: none; padding: 8px 15px; margin: 10px 5px 0 0;
+    border-radius: 4px; cursor: pointer;
+}
+fieldset button:hover { background: #333; }

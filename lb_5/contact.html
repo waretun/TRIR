@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты и Анкета</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Анкета</h1>
+
+        <div class="menu">
+            <a href="main.html" class="btn">Главная</a>
+            <a href="test.html" class="btn">Пройти тест</a>
+            <a href="zakaz.html" class="btn">Заказать</a>
+            <a href="contact.html" class="btn">Контакты</a>
+        </div>
+
+        <div class="contact-info">
+            <form action="#" method="GET">
+                <fieldset>
+                    <legend>Анкетные данные</legend>
+                    <p>
+                        <label for="name">Введите имя</label>
+                        <input type="text" name="name" id="name" placeholder="ваше имя">
+                    </p>
+                    <p>
+                        <label for="email">Введите электронную почту*</label>
+                        <input type="email" name="email" id="email" required>
+                    </p>
+                    <p>Ваш телефон <input type="tel"></p>
+                    <p>
+                        <label>Ваш возраст
+                            <input type="number" min="0" max="110">
+                        </label>
+                    </p>
+                    <p>
+                        <input type="password" maxlength="10">
+                    </p>
+                    <button type="submit">Отправить</button>
+                    <button type="reset">Сбросить</button>
+                </fieldset>
+            </form>
+
+            <br>
+
+            <form action="#" method="GET">
+                <p><input type="date" value="2021-09-01"></p>
+                <p><input type="month" value="2021-09"></p>
+                <p><input type="time" value="13:25"></p>
+                <p><input type="range"></p>
+                <p><input type="color"></p>
+                <p><input type="file"></p>
+                <p><input type="url" name="" id=""></p>
+                <button type="submit">Отправить</button>
+                <button type="reset">Сбросить</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
