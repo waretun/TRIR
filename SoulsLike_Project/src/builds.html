@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сборки — Гильдия Соулс</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="Context/img/logo.png" alt="Логотип">
+            <h1>Гильдия Соулс</h1>
+        </div>
+        <div class="burger" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul id="navMenu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="bosses.html">Боссы</a></li>
+                <li><a href="builds.html" class="active">Сборки</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Предложить свою сборку</h2>
+        <p>Поделитесь своим билдом с сообществом!</p>
+        
+        <!-- Пункт 6: Форма для ввода -->
+        <form action="#" method="get" style="display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin-top: 20px;">
+            <label style="color: #c8a96e;">Название сборки:</label>
+            <input type="text" name="buildname" required style="padding: 10px; background: #000; border: 1px solid #555; color: #fff;">
+            
+            <label style="color: #c8a96e;">Игра:</label>
+            <select name="game" style="padding: 10px; background: #000; border: 1px solid #555; color: #fff;">
+                <option>Dark Souls 3</option>
+                <option>Bloodborne</option>
+                <option>Sekiro</option>
+            </select>
+
+            <label style="color: #c8a96e;">Описание:</label>
+            <textarea name="desc" rows="4" style="padding: 10px; background: #000; border: 1px solid #555; color: #fff;"></textarea>
+            
+            <button type="submit" class="action-btn" style="width: fit-content;">Отправить в Гильдию</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Гильдия Соулс-лайкеров. "Prepare to Die".</p>
+    </footer>
+
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Наверх">↑</button>
+    <script src="Context/script/script.js"></script>
+</body>
+</html>

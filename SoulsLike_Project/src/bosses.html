@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Боссы — Гильдия Соулс</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="Context/img/logo.png" alt="Логотип">
+            <h1>Гильдия Соулс</h1>
+        </div>
+        <div class="burger" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul id="navMenu">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="bosses.html" class="active">Боссы</a></li>
+                <li><a href="builds.html">Сборки</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Легендарные Боссы</h2>
+        <p>Наведите курсор на картинку, чтобы увидеть имя босса.</p>
+
+        <div class="gallery-grid">
+            <!-- Пункт 8b: Картинки с анимированными подписями -->
+            <div class="gallery-item">
+                <img src="Context/img/midir.jpg" alt="Даркеатер Мидир">
+                <span class="gallery-caption">Даркеатер Мидир</span>
+            </div>
+            <div class="gallery-item">
+                <img src="Context/img/friede.jpg" alt="Отче Фридэ">
+                <span class="gallery-caption">Отче Фридэ</span>
+            </div>
+            <div class="gallery-item">
+                <img src="Context/img/kos.jpg" alt="Кос, Сирота Крови">
+                <span class="gallery-caption">Кос, Сирота Крови</span>
+            </div>
+            <div class="gallery-item">
+                <img src="Context/img/isshin.jpg" alt="Иссин Асина">
+                <span class="gallery-caption">Иссин Асина, Клинок Секу</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Гильдия Соулс-лайкеров. "Prepare to Die".</p>
+    </footer>
+
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Наверх">↑</button>
+    <script src="Context/script/script.js"></script>
+</body>
+</html>
