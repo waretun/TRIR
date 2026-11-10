@@ -1,0 +1,180 @@
+/* Общие сбросы */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* --- ШАПКА САЙТА (Flexbox) --- */
+header {
+    width: 100%;
+    height: 200px;
+    background-image: url('img/shapka_div.jpg');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 3px solid #336699;
+}
+
+/* --- ОСНОВНОЙ КОНТЕЙНЕР (Flexbox) --- */
+.main-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* --- ЛЕВОЕ МЕНЮ (Sidebar) --- */
+.sidebar {
+    flex: 0 0 250px; /* Фиксированная ширина 250px */
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+.sidebar h3 {
+    color: #000080;
+    margin: 15px 0 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar li {
+    margin-bottom: 5px;
+}
+
+/* Ссылки в меню */
+.sidebar a {
+    color: #006064;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Эффект при наведении (требование из контрольного задания) */
+.sidebar a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* --- ПРАВАЯ ЧАСТЬ (Контент) --- */
+.content {
+    flex: 1; /* Занимает все оставшееся пространство */
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.content h2 {
+    color: #000080;
+    margin-bottom: 10px;
+}
+
+.content p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* --- СЕТКА ДЛЯ КАРТИНОК В КОНТЕНТЕ (Flexbox) --- */
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Разрешаем перенос на новую строку */
+    gap: 15px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: calc(50% - 15px); /* По 2 картинки в ряд */
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* --- СЕТКА ДЛЯ ПРОЕКТОВ (Страница townhouse.html) --- */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    flex: 0 0 calc(50% - 20px); /* По 2 карточки в ряд */
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.project-card h3 {
+    font-size: 16px;
+    color: #000080;
+    margin-bottom: 5px;
+}
+
+.project-card p {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.specs {
+    background: #f0f0f0;
+    padding: 10px;
+    font-size: 13px;
+}
+
+/* --- ПОДВАЛ (Flexbox) --- */
+footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    background: #444;
+    padding: 15px;
+    text-align: center;
+}
+
+/* --- АДАПТИВНОСТЬ (Медиа-запросы) --- */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Меню встает сверху контента */
+    }
+    .sidebar {
+        flex: 1 1 100%;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+    }
+    .gallery img, .project-card {
+        width: 100%; /* Карточки в одну колонку */
+        flex: 1 1 100%;
+    }
+}
